@@ -1,42 +1,64 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <math.h>
+#define pi 3.141592
 
 
 int main(int argc, char *argv[]) {
 
-//1) FaÁa um programa que receba dois n˙meros, efetue e soma e mostre o resultado na tela.	
+//1) Fa√ßa um programa que receba dois n√∫meros, efetue e soma e mostre o resultado na tela.	
 	int a,b,c;
 	
 	a = 8;
 	b = 19;
 	c = a+b;
-	printf("A soma de %d + %d = %d", a,b,c);
+	printf("\n A soma de %d + %d = %d", a,b,c);
 	
-//2)FaÁa um programa que calcule a ·rea de um tri‚ngulo ret‚ngulo, dados os valores de sua base e altura	
-	int base = 5;
-	int altura = 10;
-    int area = base * altura/2;
-	printf("\n A Area do trinagulo eh %d", area);
+//2)Fa√ßa um programa que calcule a √°rea de um tri√¢ngulo ret√¢ngulo, dados os valores de sua base e altura
 
-//3) FaÁa um programa que calcule a mÈdia aritmÈtica entre trÍs valores informados. Mostre me a mÈdia na tela.
-	int notaAluno1 = 9;
-	int notaAluno2 = 6;
-	float notaAluno3 = 7.5;
-	float mediaAritmetica = (notaAluno1 + notaAluno2 + notaAluno3 ) / 3;
-	printf("\n A media das notas dos alunos sao %.2f\n", mediaAritmetica);
+    float base, altura, area;
+    
+	printf("\n Insira a base do triangulo: ");
+    scanf("%f", &base);
+    
+    printf("\n Insira a altura do triangulo: ");
+    scanf("%f", &altura);
+    
+    area = (base * altura)/2;
+    printf("\n A area do triangulo retangulo com base %.2f e altura %.2f eh igual = %.2f", base, altura, area);
 	
-//4)FaÁa um programa que receba o raio de um cÌrculo, calcule e mostre sua ·rea. (¡rea = pi * R2)
 
-     int raio = 4;
-     float pi = 3.14;
-     float areaCirculo = pi * (2 * raio);
-     printf("\n A area do circulo eh %.2f\n", areaCirculo);
+//3) Fa√ßa um programa que calcule a m√©dia aritm√©tica entre tr√™s valores informados. Mostre me a m√©dia na tela.
+
+    int notaAluno1, notaAluno2, notaAluno3, mediaAritmetica;
+    
+	printf("\n Insira a nota do primeiro aluno: ");
+    scanf("%d", &notaAluno1);
+    
+    printf("\n Insira a nota do segundo aluno: ");
+    scanf("%d", &notaAluno2);
+    
+    printf("\n Insira a nota do terceiro aluno: ");
+    scanf("%d", &notaAluno3);
+    
+
+	mediaAritmetica = (notaAluno1 + notaAluno2 + notaAluno3 ) / 3;
+	printf("\n A media das notas dos alunos sao: %d ", mediaAritmetica);
+	
+//4)Fa√ßa um programa que receba o raio de um c√≠rculo, calcule e mostre sua √°rea. (√Årea = pi * R2)
+     
+	float raio, areaCirculo;     
+    
+    printf("\n Insira o raio do circulo: ");
+    scanf("%f", &raio);
+    
+    
+     areaCirculo = pi * pow(raio,2);
+     printf("\n A area do circulo com raio %.2f\n eh = %.2f\n", raio, areaCirculo);
 	
 	return 0;
 	
 }
-
 
 
 
