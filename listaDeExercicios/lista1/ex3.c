@@ -2,6 +2,8 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+ /* Implemente um programa que leia um número n [com n positivo & n ≤ 64] e mostre na tela o seu valor em base binária (bits). */
+ 
  int n;
     int resultado1, resultado2, resultado3, resultado4, resultado5, resultado6;
 
