@@ -2,6 +2,11 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+
+/* Faça um programa que leia, o salário fixo e o valor total em vendas de um vendedor.
+Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas.
+Mostre o total a receber no final do mês, com duas casas decimais. */
+    
 float salarioFixo, valorTotalVendas, comissao;
     
     printf("Insira o seu salario: ");
