@@ -3,8 +3,25 @@
 
 
     int main(int argc, char *argv[]) {
+
+
+     /* EX 1: Faça um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual.*/
     
-    /* Leia uma velocidade em km/h (quilômetros por hora) e apresente convertida em m/s (metros por segundo). A fórmula de conversão é M = K/3,6, sendo K a velocidade em km/h e M em m/s.*/
+    int anoNascimento, idade, anoAtual;
+    
+    printf("\n Insira sua idade ate o final do ano: ");
+    scanf("%d", &idade);
+    
+    printf("\n Insira o ano atual: ");
+    scanf("%d", &anoAtual);
+    
+    anoNascimento = anoAtual - idade;
+    
+    printf("\n O ano do seu nascimento eh --> %d \n", anoNascimento);
+        
+    
+    /*EX 2: Leia uma velocidade em km/h (quilômetros por hora) e apresente convertida em m/s (metros por segundo).
+    A fórmula de conversão é M = K/3,6, sendo K a velocidade em km/h e M em m/s.*/
 
     int velocidadeKMH; 
     float velocidadeMS;
@@ -32,7 +49,8 @@
 
 
     /* EX 4: 
-    Leia um valor que represente uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit. A fórmula de conversão é: F = C * (9.0/5.0) + 32.0, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.*/
+    Leia um valor que represente uma temperatura em graus Celsius e apresente-a convertida em graus Fahrenheit.
+    A fórmula de conversão é: F = C * (9.0/5.0) + 32.0, sendo F a temperatura em Fahrenheit e C a temperatura em Celsius.*/
 
        float grausCelsius, grausFahrenheit;
 
@@ -43,9 +61,112 @@
     
        printf("\n %.1fC --> %.1fF", grausCelsius, grausFahrenheit);
 
-    /* EX: 5*/
+    /* EX: 5*
+    Leia um ângulo em graus e apresente-o convertido em radianos. 
+	A fórmula de conversão é R = G * p/180, sendo G o ângulo em graus e R em radianos e p = 3.141592.*/
 
+    float anguloGraus, pi, radianos;
+	
+	printf("\nInsira um angulo em graus --> ");
+    scanf("\n%f", &anguloGraus);
+    
+    pi = 3.141592;
+    
+    radianos = anguloGraus * pi/180;
+    
+    printf("\n O angulo: %.1f graus em radianos e = %1.f ", anguloGraus, radianos);
+    
+    
+    /* EX 6:
+	Faça um programa que leia um número inteiro e retorne seu antecessor e seu sucessor.*/
+	
+	int numero, antecessor, sucessor;
+	
+	printf("\nInsira um numero inteiro --> ");
+    scanf("\n%d", &numero);
+    
+    antecessor = numero - 1 ;
+    sucessor = numero + 1;
+    
+    printf("\n %d <- %d -> %d ", antecessor, numero, sucessor);
+    
+    
+    /* EX: 7
+	A importância de R$780.000,00 será dividida entre três ganhadores de um concurso, sendo que:
+	
+    O primeiro receberá 46% do total.
+    O segundo receberá 32% do total.
+    O terceiro receberá o restante.
 
+    Calcule e imprima a quantia recebida por cada um dos ganhadores.*/
+    
+    
+    float premio, ganhador1, ganhador2, ganhador3, restante;
+    
+    premio = 78000.0;
+    
+    ganhador1 = premio * 0.46;
+    ganhador2 = premio * 0.32;
+    restante = premio - ganhandor1 - ganhandor2;
+    ganhador3 = restante;
+    
+    
+    printf("\n PRIMEIRO GANHADOR GANHOU: %2.f", ganhandor1);
+    printf("\n SEGUNDO GANHADOR GANHOU: %2.f", ganhandor2);
+    printf("\n TERCEIRO GANHADOR GANHOU: %2.f", ganhandor3);
+    
+    /* EX 8:
+	Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento em uma fábrica
+	e informe-o expresso no formato horas: minutos:segundos.*/
+	
 
+    
+    
+
+    
+     
+    
+    
+	
+	
+	/*EX 10: 
+	Faça um programa que leia três valores e apresente o maior dos três valores lidos seguido da mensagem “eh o maior”.
+	Utilize a fórmula:
+	
+    MaiorAB = (a + b + abs(a - b)) / 2*/
+    
+    int a,b,c, maior, maiorA_B;
+    
+    printf("\nInforme os valores a serem comparados: ");
+    scanf("\n%d %d %d", &a,&b,&c);
+    
+    
+    //conta
+    
+    maiorA_B = (a+b+abs(a-b))/2;
+    maior = (maiorA_B + c(maiorA_B - c))/2
+    
+    printf("\n O maior entre |%d|%d|%d| = %d", a,b,c, maior);
+    
+    
+    // agora comparao com 4 valores:
+    
+
+    int d, maiorC_D;
+    
+    printf("\nInforme os valores a serem comparados: ");
+    scanf("\n%d %d %d %d", &a,&b,&c,&d);
+    
+    
+    //conta
+    
+    maiorC_D = (c+d+abs(c-d))/2;
+    maior = (maiorA_B + maiorC_D+abs(maiorA_B - maiorC_D))/2;
+    
+    
+    printf("\n O maior entre |%d|%d|%d|%d| = %d", a,b,c,d, maior);
+    
     return 0;
+
+
 }
