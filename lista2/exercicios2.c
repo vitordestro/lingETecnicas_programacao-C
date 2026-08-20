@@ -5,11 +5,11 @@
     int main(int argc, char *argv[]) {
 
 
-     /* EX 1: Faça um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual.*/
+    /* EX 1: Faça um programa que calcule o ano de nascimento de uma pessoa a partir de sua idade e do ano atual.*/
     
     int anoNascimento, idade, anoAtual;
     
-    printf("\n Insira sua idade ate o final do ano: ");
+    printf("\nInsira sua idade ate o final do ano: ");
     scanf("%d", &idade);
     
     printf("\n Insira o ano atual: ");
@@ -17,17 +17,16 @@
     
     anoNascimento = anoAtual - idade;
     
-    printf("\n O ano do seu nascimento eh --> %d \n", anoNascimento);
+    printf("\nO ano do seu nascimento eh --> %d \n", anoNascimento);
         
     
     /*EX 2: Leia uma velocidade em km/h (quilômetros por hora) e apresente convertida em m/s (metros por segundo).
     A fórmula de conversão é M = K/3,6, sendo K a velocidade em km/h e M em m/s.*/
 
-    int velocidadeKMH; 
-    float velocidadeMS;
-
+    float velocidadeKMH, velocidadeMS; 
+   
     printf("\nInsira o valor da velocidade em (km/h): ");
-    scanf("\n%d", &velocidadeKMH);
+    scanf("%d", &velocidadeKMH);
     
     velocidadeMS = velocidadeKMH/3.6;
 
@@ -38,8 +37,8 @@
     
     float valorReais, valorDolar, cotacaoDolarAtual;
 
-    printf("\nInsira o preco em reais -->");
-    scanf("\n%f", &valorReais);
+    printf("\nInsira o preco em reais --> ");
+    scanf("%f", &valorReais);
 
 
     cotacaoDolarAtual = 0.1933;
@@ -54,12 +53,12 @@
 
        float grausCelsius, grausFahrenheit;
 
-       printf("\nInsira uma temperatura em graus Celsius -->");
-       scanf("\n%f", &grausCelsius);
+       printf("\nInsira uma temperatura em graus Celsius --> ");
+       scanf("%f", &grausCelsius);
 
        grausFahrenheit = grausCelsius * (9.0/5.0) + 32.0;
     
-       printf("\n %.1fC --> %.1fF", grausCelsius, grausFahrenheit);
+       printf("\n %.1fC --> %.2fF", grausCelsius, grausFahrenheit);
 
     /* EX: 5*
     Leia um ângulo em graus e apresente-o convertido em radianos. 
@@ -68,7 +67,7 @@
     float anguloGraus, pi, radianos;
 	
 	printf("\nInsira um angulo em graus --> ");
-    scanf("\n%f", &anguloGraus);
+    scanf("%f", &anguloGraus);
     
     pi = 3.141592;
     
@@ -83,7 +82,7 @@
 	int numero, antecessor, sucessor;
 	
 	printf("\nInsira um numero inteiro --> ");
-    scanf("\n%d", &numero);
+    scanf("%d", &numero);
     
     antecessor = numero - 1 ;
     sucessor = numero + 1;
@@ -103,17 +102,17 @@
     
     float premio, ganhador1, ganhador2, ganhador3, restante;
     
-    premio = 78000.0;
+    premio = 780000.0;
     
     ganhador1 = premio * 0.46;
     ganhador2 = premio * 0.32;
-    restante = premio - ganhandor1 - ganhandor2;
+    restante = premio - ganhador1 - ganhador2;
     ganhador3 = restante;
     
     
-    printf("\n PRIMEIRO GANHADOR GANHOU: %2.f", ganhandor1);
-    printf("\n SEGUNDO GANHADOR GANHOU: %2.f", ganhandor2);
-    printf("\n TERCEIRO GANHADOR GANHOU: %2.f", ganhandor3);
+    printf("\n PRIMEIRO GANHADOR GANHOU: %2.f", ganhador1);
+    printf("\n SEGUNDO GANHADOR GANHOU: %2.f", ganhador2);
+    printf("\n TERCEIRO GANHADOR GANHOU: %2.f", ganhador3);
     
     /* EX 8:
 	Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento em uma fábrica
@@ -123,7 +122,7 @@
     int valorSegundos, horas, minutos, segundosRestantes;
     
     printf("\n Insira um valor em segundos: ");
-    scanf("\n %d", &valorSegundos);
+    scanf("%d", &valorSegundos);
 
     horas = valorSegundos / 3600; 
     segundosRestantes = valorSegundos % 3600;
@@ -143,7 +142,7 @@
     float quantidadeDeLitrosNecessaria, tempoGasto_horas, velocidadeMedia, distanciaPercorrida;
 
     printf("\n Insira o tempo gasto na viagem (em horas): ");
-    scanf("\n%f", &tempoGasto_horas);
+    scanf("%f", &tempoGasto_horas);
 
     printf("\n Insira a velocidade media do automovel (em km/h): ");
     scanf("\n%f", &velocidadeMedia);
@@ -172,15 +171,15 @@
     int a,b,c, maior, maiorA_B;
     
     printf("\nInforme os valores a serem comparados: ");
-    scanf("\n%d %d %d", &a,&b,&c);
+    scanf("%d %d %d", &a,&b,&c);
     
     
     //conta
     
     maiorA_B = (a+b+abs(a-b))/2;
-    maior = (maiorA_B + c(maiorA_B - c))/2
+    maior = (maiorA_B+c+abs(maiorA_B - c))/2
     
-    printf("\n O maior entre |%d|%d|%d| = %d", a,b,c, maior);
+    printf("\n O maior entre |%d|%d|%d| = %d", a,b,c maior);
     
     
     // agora comparao com 4 valores:
@@ -189,7 +188,7 @@
     int d, maiorC_D;
     
     printf("\nInforme os valores a serem comparados: ");
-    scanf("\n%d %d %d %d", &a,&b,&c,&d);
+    scanf("%d %d %d %d", &a,&b,&c,&d);
     
     
     //conta
@@ -198,7 +197,7 @@
     maior = (maiorA_B + maiorC_D+abs(maiorA_B - maiorC_D))/2;
     
     
-    printf("\n O maior entre |%d|%d|%d|%d| = %d", a,b,c,d, maior);
+    printf("\nO maior entre |%d|%d|%d|%d| = %d", a,b,c,d, maior);
     
     return 0;
 
