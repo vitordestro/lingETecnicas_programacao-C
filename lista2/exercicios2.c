@@ -118,17 +118,51 @@
     /* EX 8:
 	Leia um valor inteiro, que é o tempo de duração em segundos de um determinado evento em uma fábrica
 	e informe-o expresso no formato horas: minutos:segundos.*/
+		
 	
+    int valorSegundos, horas, minutos, segundosRestantes;
+    
+    printf("\n Insira um valor em segundos: ");
+    scanf("\n %d", &valorSegundos);
 
+    horas = valorSegundos / 3600; 
+    segundosRestantes = valorSegundos % 3600;
+    minutos = segundosRestantes / 60;
+    segundosRestantes = segundosRestantes % 60;
     
-    
+    printf("\n %d:%d:%d", horas, minutos, segundosRestantes);
 
+		
+    /* EX 9: 
+    Joãozinho quer calcular e mostrar a quantidade de litros de combustível gastos em uma viagem, ao utilizar um automóvel que faz 12 KM/L.
+    Para isso, ele gostaria que você o auxiliasse através de um simples programa. 
+    Para efetuar o cálculo, deve-se fornecer o tempo gasto na viagem (em horas) e a velocidade média durante a mesma (em km/h). 
+    Assim, pode-se obter distância percorrida e, em seguida, calcular quantos litros seriam necessários.
+    Mostre o valor com 3 casas decimais após o ponto.*/
+
+    float quantidadeDeLitrosNecessaria, tempoGasto_horas, velocidadeMedia, distanciaPercorrida;
+
+    printf("\n Insira o tempo gasto na viagem (em horas): ");
+    scanf("\n%f", &tempoGasto_horas);
+
+    printf("\n Insira a velocidade media do automovel (em km/h): ");
+    scanf("\n%f", &velocidadeMedia);
+
+    distanciaPercorrida = velocidadeMedia * tempoGasto_horas;
+    quantidadeDeLitrosNecessaria = distanciaPercorrida / 12;
+
+    printf("\n==============================================");
+    printf("\n          CALCULO DE COMBUSTIVEL");
+    printf("\n==============================================");
+
+   printf("\n Tempo da viagem:       %.1f hora(s)", tempoGasto_horas);
+   printf("\n Velocidade media:      %.1f km/h", velocidadeMedia);
+   printf("\n Distancia percorrida:  %.1f km", distanciaPercorrida);
+   printf("\n Combustivel necessario: %.3f litro(s)", quantidadeDeLitrosNecessaria);
+
+    printf("\n==============================================\n");
+		
     
-     
-    
-    
-	
-	
 	/*EX 10: 
 	Faça um programa que leia três valores e apresente o maior dos três valores lidos seguido da mensagem “eh o maior”.
 	Utilize a fórmula:
