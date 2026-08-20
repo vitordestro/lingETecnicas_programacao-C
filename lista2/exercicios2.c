@@ -26,11 +26,11 @@
     float velocidadeKMH, velocidadeMS; 
    
     printf("\nInsira o valor da velocidade em (km/h): ");
-    scanf("%d", &velocidadeKMH);
+    scanf("%f", &velocidadeKMH);
     
     velocidadeMS = velocidadeKMH/3.6;
 
-    printf("\n A velocidade %d(Km/h) eh igual a %.2f(m/s)", velocidadeKMH, velocidadeMS);
+    printf("\n A velocidade %f(Km/h) eh igual a %.2f(m/s)", velocidadeKMH, velocidadeMS);
 
     /*EX 3:
     Faça um programa que leia um valor em reais e a cotação do dólar. Em seguida, imprima o valor correspondente em dólares.*/
@@ -145,7 +145,7 @@
     scanf("%f", &tempoGasto_horas);
 
     printf("\n Insira a velocidade media do automovel (em km/h): ");
-    scanf("\n%f", &velocidadeMedia);
+    scanf("%f", &velocidadeMedia);
 
     distanciaPercorrida = velocidadeMedia * tempoGasto_horas;
     quantidadeDeLitrosNecessaria = distanciaPercorrida / 12;
@@ -177,9 +177,9 @@
     //conta
     
     maiorA_B = (a+b+abs(a-b))/2;
-    maior = (maiorA_B+c+abs(maiorA_B - c))/2
+    maior = (maiorA_B+c+abs(maiorA_B - c))/2;
     
-    printf("\n O maior entre |%d|%d|%d| = %d", a,b,c maior);
+    printf("\n O maior entre |%d|%d|%d| = %d", a,b,c, maior);
     
     
     // agora comparao com 4 valores:
