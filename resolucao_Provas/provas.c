@@ -47,22 +47,21 @@ void exec0_provaESOFT_M_A() {
 }
 
 
-int qntd_mochilas_necessarias(int itens, int mochilaEspaco) {
+void qntd_mochilas_necessarias(int itens, int mochilaEspaco) {
 
-    if (itens > mochilaEspaco) {
+    if (mochilaEspaco <= 0 || itens < 0) {
+        printf("Calculo impossivel! Capacidade deve ser maior que 0 e itens nao pode ser negativo.\n");
+    }
+    else if (itens > mochilaEspaco) {
 
-        int mochilaExtra = itens / mochilaEspaco;
+        int mochilaExtra = (itens - 1) / mochilaEspaco;
 
         printf("Quantidade Necessaria de Mochilas Extra sao -> %d\n", mochilaExtra);
     }
     else {
-
         printf("Capacidade Atual da Mochila eh suficiente!\n");
     }
-
-    return 0;
 }
-
 
 void exec1_provaESOFT_M_A() {
 
@@ -170,8 +169,7 @@ void prova_Esoft_MA() {
     }
 }
 
-
-/* ESOFT M B - EXERCICIO 0 */
+/* exercicios prova esoft m b */
 
 int qntd_mochilas_necessarias_sobra(int itens, int mochilaEspaco) {
 
@@ -353,6 +351,35 @@ void prova_Esoft_MB() {
     }
 }
 
+/* exercicios da prova de ads na */
+
+int verificaConsecutivos(int a, int b) {
+    if (a == b + 1 || b == a + 1) {
+        printf("%d e %d sao consecutivos\n", a, b);
+        return 1;
+    }
+    return 0;
+}
+
+void exec0_provaADSIS_NA() {
+
+    int n1, n2, n3, n4, n5;
+    int total = 0;
+
+    printf("Digite 5 numeros inteiros: ");
+    scanf("%d %d %d %d %d", &n1, &n2, &n3, &n4, &n5);
+
+    total += verificaConsecutivos(n1, n2);
+    total += verificaConsecutivos(n2, n3);
+    total += verificaConsecutivos(n3, n4);
+    total += verificaConsecutivos(n4, n5);
+
+    if (total == 0) {
+        printf("Nenhum numero consecutivo.\n");
+    }
+}
+
+
 void prova_ADSIS_NA() {
 
     int op;
@@ -360,30 +387,29 @@ void prova_ADSIS_NA() {
     printf("QUAL EXERCICIO VC DESEJA REALIZAR? [0] [1] [2]?\n");
     scanf("%d", &op);
 
-    /*
+    
     switch(op) {
 
         case 0:
             exec0_provaADSIS_NA();
             break;
 
-        case 1:
-            exec1_provaADSIS_NA();
-            break;
+    //     case 1:
+    //         exec1_provaADSIS_NA();
+    //         break;
 
-        case 2:
-            exec2_provaADSIS_NA();
-            break;
+    //     case 2:
+    //         exec2_provaADSIS_NA();
+    //         break;
 
         default:
             printf("ESCOLHA UM EX VALIDO!\n");
             break;
     }
-    */
+    
 }
 
 
-/* MAIN */
 
 int main(int argc, char *argv[]) {
 
@@ -398,11 +424,11 @@ int main(int argc, char *argv[]) {
 
     switch(op_Prova) {
 
-        /*
+        
         case 1:
             prova_ADSIS_NA();
             break;
-        */
+        
 
         case 2:
             prova_Esoft_MA();
