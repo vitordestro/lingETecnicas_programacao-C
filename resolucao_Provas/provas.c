@@ -204,9 +204,6 @@ void exec0_provaESOFT_M_B() {
     );
 }
 
-
-/* ESOFT M B - EXERCICIO 1 */
-
 void exec1_provaESOFT_M_B() {
 
     int num1, num2, num3;
@@ -251,9 +248,6 @@ void exec1_provaESOFT_M_B() {
         }
     }
 }
-
-
-/* ESOFT M B - EXERCICIO 2 */
 
 void exec2_provaESOFT_M_B() {
 
@@ -332,9 +326,6 @@ void exec2_provaESOFT_M_B() {
     }
 }
 
-
-/* MENU ESOFT M B */
-
 void prova_Esoft_MB() {
 
     int op;
@@ -361,12 +352,6 @@ void prova_Esoft_MB() {
             break;
     }
 }
-
-
-/* MENU ADSIS
-   Deixei comentado porque voce ainda nao mandou
-   os exercicios da ADSIS.
-*/
 
 void prova_ADSIS_NA() {
 
